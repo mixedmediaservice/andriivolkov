@@ -17,7 +17,7 @@ export default function Contact() {
       <main className="min-h-screen bg-white pt-16">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-12 text-center">
-            Get In Touch
+            Contact
           </h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
