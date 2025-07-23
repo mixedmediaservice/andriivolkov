@@ -1,5 +1,25 @@
 import Navigation from '@/components/layout/Navigation';
 import ImageGallery from '@/components/gallery/ImageGallery';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Paintings",
+  description: "Original paintings by Andrii Volkov using alternative materials like household dyes, sand, earth, soot and fire. Available works can be seen at Aia Contemporary gallery.",
+  keywords: ["paintings", "mixed media", "alternative materials", "contemporary art", "Aia Contemporary", "canvas art"],
+  alternates: {
+    canonical: "https://andriivolkov.com/paintings",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://andriivolkov.com/images/paintings/Andrii-Volkov-Y23.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Andrii Volkov Original Painting - Y23",
+      },
+    ],
+  },
+};
 
 const paintingImages = [
   { src: '/images/paintings/Andrii Volkov - MM-B.jpg', alt: 'MM-B - Mixed Media Artwork' },

@@ -1,5 +1,25 @@
 import Navigation from '@/components/layout/Navigation';
 import ImageGallery from '@/components/gallery/ImageGallery';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Tattoo Art",
+  description: "Tattoo designs by Andrii Volkov that create permanent impressions of impermanent marks captured from urban environments. Modern equipment meets street art documentation.",
+  keywords: ["tattoo art", "tattoo design", "street art", "urban environment", "permanent art", "body art"],
+  alternates: {
+    canonical: "https://andriivolkov.com/tattoo",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://andriivolkov.com/images/tattoos/Andrii Volkov - Tattoo 1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Andrii Volkov Tattoo Design",
+      },
+    ],
+  },
+};
 
 const tattooImages = [
   { src: '/images/tattoos/Andrii Volkov - Tattoo 1.jpg', alt: 'Custom Tattoo Design 1' },

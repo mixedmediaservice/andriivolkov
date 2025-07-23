@@ -1,4 +1,14 @@
 import Navigation from '@/components/layout/Navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with Andrii Volkov for art commissions, exhibitions, or general inquiries. Connect via email or Instagram.",
+  keywords: ["contact artist", "art commission", "art exhibition", "artist inquiry", "art consultation"],
+  alternates: {
+    canonical: "https://andriivolkov.com/contact",
+  },
+};
 
 export default function Contact() {
   return (
@@ -22,12 +32,12 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-neutral-900">Social Media</h3>
                     <a 
-                      href="https://instagram.com/andriivolkov" 
+                      href="https://www.instagram.com/volkov.scvt" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-neutral-700 hover:text-neutral-900 transition-colors"
                     >
-                      @andriivolkov on Instagram
+                      @volkov.scvt on Instagram
                     </a>
                   </div>
                 </div>

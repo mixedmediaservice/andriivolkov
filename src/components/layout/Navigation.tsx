@@ -10,7 +10,7 @@ const navItems = [
   { name: 'TATTOO', href: '/tattoo' },
   { name: 'CONTACT', href: '/contact' },
   { name: 'ABOUT', href: '/about' },
-  { name: 'INSTAGRAM', href: 'https://instagram.com/andriivolkov', external: true },
+  { name: 'INSTAGRAM', href: 'https://www.instagram.com/volkov.scvt', external: true },
 ];
 
 export default function Navigation() {
@@ -22,11 +22,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2 text-xl font-bold text-neutral-900 hover:text-neutral-600 transition-colors">
             <Image
-              src="/favicon.ico"
+              src="/images/volkov-profile.png"
               alt="Andrii Volkov"
-              width={24}
-              height={24}
-              className="w-6 h-6"
+              width={32}
+              height={32}
+              className="w-8 h-8 rounded-full"
             />
             <span>ANDRII VOLKOV</span>
           </Link>

@@ -1,5 +1,25 @@
 import Navigation from '@/components/layout/Navigation';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn about Andrii Volkov, a contemporary artist who acts as a journalist of simple beauty, transforming ordinary materials into extraordinary art through paintings and tattoos.",
+  keywords: ["artist biography", "contemporary artist", "art philosophy", "street art", "urban exploration", "alternative materials"],
+  alternates: {
+    canonical: "https://andriivolkov.com/about",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://andriivolkov.com/images/Andrii-Volkov-Amsterdam-2019.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Andrii Volkov - Artist Photo Amsterdam 2019",
+      },
+    ],
+  },
+};
 
 export default function About() {
   return (
@@ -8,7 +28,7 @@ export default function About() {
       <main className="min-h-screen bg-white pt-16">
         <div className="max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-12 text-center">
-            About Andrii
+            About
           </h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -37,7 +57,7 @@ export default function About() {
                 The playful use of the ordinary with the contemporary is also present in Andrii Volkov&apos;s tattoos - modern equipment is used to create a permanent impression of the impermanent marks that have been captured from the natural world of the urban environment. The artist moves leisurely along the streets of cities such as Amsterdam or Bucharest, surveying walls of buildings for any interesting scratches or the sidewalks for peculiar cracks. He&apos;ll find something, stop, immerse in it completely, document it, and deliver a translation of it to his viewer.
               </p>
               
-              <p className="leading-relaxed italic">
+              <p className="leading-relaxed">
                 This ability to find the &apos;ordinary&apos; and have it be seen as extraordinary is truly inspiring.
               </p>
               

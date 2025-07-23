@@ -1,6 +1,25 @@
 import Navigation from '@/components/layout/Navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Andrii Volkov is a contemporary artist who observes the world and transforms ordinary materials into extraordinary art. Discover his paintings and tattoo designs inspired by urban environments.",
+  alternates: {
+    canonical: "https://andriivolkov.com",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "https://andriivolkov.com/images/hero/heroimage.JPG",
+        width: 1200,
+        height: 630,
+        alt: "Andrii Volkov - Artist Portfolio Hero Image",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
@@ -20,8 +39,9 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
           <div className="relative z-10 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
-              ANDRII VOLKOV
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 text-center">
+              <div>ANDRII</div>
+              <div>VOLKOV</div>
             </h1>
             <div className="space-x-4">
               <Link
