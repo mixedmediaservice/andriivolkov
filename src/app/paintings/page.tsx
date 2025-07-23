@@ -16,12 +16,12 @@ export default function Paintings() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-neutral-900 pt-16">
+      <main className="min-h-screen bg-white pt-16">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8 text-center">
             Paintings
           </h1>
-          <p className="text-neutral-300 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto">
             Explore a collection of original paintings showcasing various styles and techniques.
           </p>
           

@@ -16,10 +16,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold text-neutral-100 hover:text-neutral-300 transition-colors">
+          <Link href="/" className="text-xl font-bold text-neutral-900 hover:text-neutral-600 transition-colors">
             ANDRII VOLKOV
           </Link>
 
@@ -32,7 +32,7 @@ export default function Navigation() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-white transition-colors text-sm font-medium"
+                  className="text-neutral-600 hover:text-neutral-900 transition-colors text-sm font-medium"
                 >
                   {item.name}
                 </a>
@@ -40,7 +40,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-neutral-300 hover:text-white transition-colors text-sm font-medium"
+                  className="text-neutral-600 hover:text-neutral-900 transition-colors text-sm font-medium"
                 >
                   {item.name}
                 </Link>
@@ -51,7 +51,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800 transition-colors"
+            className="md:hidden p-2 rounded-md text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isOpen ? (
@@ -65,7 +65,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-neutral-800">
+          <div className="md:hidden py-4 border-t border-neutral-200">
             {navItems.map((item) => (
               item.external ? (
                 <a
@@ -73,7 +73,7 @@ export default function Navigation() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 text-neutral-300 hover:text-white hover:bg-neutral-800 transition-colors text-sm font-medium"
+                  className="block px-4 py-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors text-sm font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -82,7 +82,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-neutral-300 hover:text-white hover:bg-neutral-800 transition-colors text-sm font-medium"
+                  className="block px-4 py-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors text-sm font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

@@ -5,15 +5,15 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-neutral-900 pt-16">
+      <main className="min-h-screen bg-white pt-16">
         <div className="max-w-4xl mx-auto px-4 py-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-12 text-center">
             About Andrii
           </h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="aspect-square bg-neutral-800 rounded-lg overflow-hidden">
+              <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
                 <Image
                   src="/images/Andrii-Volkov-Amsterdam-2019.jpeg"
                   alt="Andrii Volkov - Artist Photo (Amsterdam, 2019)"
@@ -24,34 +24,26 @@ export default function About() {
               </div>
             </div>
             
-            <div className="space-y-6 text-neutral-300">
+            <div className="space-y-6 text-neutral-700">
               <p className="text-lg leading-relaxed">
-                Welcome to my artistic world. I am Andrii Volkov, a passionate artist 
-                specializing in both traditional paintings and contemporary tattoo art.
+                Andrii Volkov is like a journalist of the simple beauty around us - he observes the world, deciphers it and gives a fluent account of what he has witnessed. Something as common as an aged sheet can be stretched onto a canvas and created into a piece of art, that evokes a range of emotions, based on the viewer&apos;s own experiences and associations with what we are looking at.
               </p>
               
               <p className="leading-relaxed">
-                My journey in art began with a deep appreciation for form, color, and 
-                storytelling. Through paintings, I explore themes of emotion and nature, 
-                while my tattoo work allows me to create permanent art that becomes part 
-                of someone&apos;s personal story.
+                Volkov&apos;s use of alternative materials like household dyes, sand, earth, soot and fire when painting, offers refuge and comfort to the onlooker, as these are tools that are relatable.
               </p>
               
               <p className="leading-relaxed">
-                Each piece I create is a unique expression, whether it&apos;s a canvas painting 
-                that captures a moment in time or a custom tattoo design that reflects 
-                the individual&apos;s personality and vision.
+                The playful use of the ordinary with the contemporary is also present in Andrii Volkov&apos;s tattoos - modern equipment is used to create a permanent impression of the impermanent marks that have been captured from the natural world of the urban environment. The artist moves leisurely along the streets of cities such as Amsterdam or Bucharest, surveying walls of buildings for any interesting scratches or the sidewalks for peculiar cracks. He&apos;ll find something, stop, immerse in it completely, document it, and deliver a translation of it to his viewer.
               </p>
               
-              <div className="pt-6">
-                <h2 className="text-2xl font-bold text-white mb-4">Artistic Focus</h2>
-                <ul className="space-y-2">
-                  <li>• Original paintings and mixed media</li>
-                  <li>• Custom tattoo designs</li>
-                  <li>• Portrait and figurative work</li>
-                  <li>• Abstract and contemporary styles</li>
-                </ul>
-              </div>
+              <p className="leading-relaxed italic">
+                This ability to find the &apos;ordinary&apos; and have it be seen as extraordinary is truly inspiring.
+              </p>
+              
+              <p className="text-right text-neutral-500 mt-8">
+                - Lee Stewart
+              </p>
             </div>
           </div>
         </div>

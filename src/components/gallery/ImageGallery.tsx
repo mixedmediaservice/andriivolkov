@@ -31,7 +31,7 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
             className="group cursor-pointer"
             onClick={() => setSelectedImage(index)}
           >
-            <div className="relative aspect-square bg-neutral-800 overflow-hidden hover:opacity-90 transition-opacity">
+            <div className="relative aspect-square bg-neutral-100 overflow-hidden hover:opacity-90 transition-opacity">
               <Image
                 src={image.src}
                 alt={image.alt}
