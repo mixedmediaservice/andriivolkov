@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StructuredData from "@/components/seo/StructuredData";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -67,6 +68,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://andriivolkov.com",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/images/volkov-profile.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +89,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-neutral-900`}
       >
+        <GoogleAnalytics />
         <StructuredData type="person" />
         <StructuredData type="website" />
         {children}

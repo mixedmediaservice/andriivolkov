@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { trackSocialMedia } from '@/lib/analytics';
 
 const navItems = [
   { name: 'HOME', href: '/' },
@@ -41,6 +42,7 @@ export default function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-600 hover:text-neutral-900 transition-colors text-sm font-medium"
+                  onClick={() => trackSocialMedia('Instagram')}
                 >
                   {item.name}
                 </a>
@@ -82,7 +84,10 @@ export default function Navigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block px-4 py-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors text-sm font-medium"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    trackSocialMedia('Instagram');
+                  }}
                 >
                   {item.name}
                 </a>

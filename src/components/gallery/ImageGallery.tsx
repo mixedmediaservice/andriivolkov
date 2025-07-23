@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { trackGalleryInteraction } from '@/lib/analytics';
 
 interface ImageItem {
   src: string;
@@ -29,7 +30,10 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
           <div 
             key={index} 
             className="group cursor-pointer"
-            onClick={() => setSelectedImage(index)}
+            onClick={() => {
+              setSelectedImage(index);
+              trackGalleryInteraction('open_lightbox', image.alt);
+            }}
           >
             <div className="relative aspect-square bg-neutral-100 overflow-hidden hover:opacity-90 transition-opacity">
               <Image
@@ -48,11 +52,17 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
       {selectedImage !== null && (
         <div 
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => {
+            setSelectedImage(null);
+            trackGalleryInteraction('close_lightbox', images[selectedImage].alt);
+          }}
         >
           <div className="relative max-w-4xl max-h-full">
             <button
-              onClick={() => setSelectedImage(null)}
+              onClick={() => {
+                setSelectedImage(null);
+                trackGalleryInteraction('close_lightbox', images[selectedImage].alt);
+              }}
               className="absolute -top-12 right-0 text-white hover:text-neutral-300 text-xl"
             >
               ✕ Close
@@ -71,7 +81,9 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setSelectedImage(selectedImage > 0 ? selectedImage - 1 : images.length - 1);
+                    const newIndex = selectedImage > 0 ? selectedImage - 1 : images.length - 1;
+                    setSelectedImage(newIndex);
+                    trackGalleryInteraction('prev_image', images[newIndex].alt);
                   }}
                   className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
                 >
@@ -80,7 +92,9 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setSelectedImage(selectedImage < images.length - 1 ? selectedImage + 1 : 0);
+                    const newIndex = selectedImage < images.length - 1 ? selectedImage + 1 : 0;
+                    setSelectedImage(newIndex);
+                    trackGalleryInteraction('next_image', images[newIndex].alt);
                   }}
                   className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
                 >
