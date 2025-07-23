@@ -17,12 +17,9 @@ export default function Tattoo() {
       <Navigation />
       <main className="min-h-screen bg-white pt-16">
         <div className="max-w-7xl mx-auto px-4 py-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-12 text-center">
             Tattoo Art
           </h1>
-          <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto">
-            A portfolio of custom tattoo designs and completed work.
-          </p>
           
           <ImageGallery images={tattooImages} columns={3} />
         </div>

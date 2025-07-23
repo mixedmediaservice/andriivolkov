@@ -22,7 +22,15 @@ export default function Paintings() {
             Paintings
           </h1>
           <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto">
-            Explore a collection of original paintings showcasing various styles and techniques.
+            Available works can be seen at{' '}
+            <a 
+              href="https://www.aiacontemporary.com/store/andrii-volkov"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-900 hover:text-neutral-600 underline font-medium"
+            >
+              Aia Contemporary
+            </a>
           </p>
           
           <ImageGallery images={paintingImages} columns={3} />
