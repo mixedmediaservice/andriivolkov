@@ -1,4 +1,5 @@
 import Navigation from '@/components/layout/Navigation';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -13,9 +14,13 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <div className="aspect-square bg-neutral-800 rounded-lg overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-neutral-500">
-                  <span>Artist Photo</span>
-                </div>
+                <Image
+                  src="/images/Andrii-Volkov-Amsterdam-2019.jpeg"
+                  alt="Andrii Volkov - Artist Photo (Amsterdam, 2019)"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             

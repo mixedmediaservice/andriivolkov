@@ -1,4 +1,16 @@
 import Navigation from '@/components/layout/Navigation';
+import ImageGallery from '@/components/gallery/ImageGallery';
+
+const paintingImages = [
+  { src: '/images/paintings/Andrii Volkov - MM-B.jpg', alt: 'MM-B - Mixed Media Artwork' },
+  { src: '/images/paintings/Andrii-Volkov-38A.jpg', alt: '38A - Original Painting' },
+  { src: '/images/paintings/Andrii-Volkov-HWE-33.jpg', alt: 'HWE-33 - Contemporary Art' },
+  { src: '/images/paintings/Andrii-Volkov-PTR11.jpg', alt: 'PTR11 - Abstract Work' },
+  { src: '/images/paintings/Andrii-Volkov-SCR.jpg', alt: 'SCR - Fine Art Piece' },
+  { src: '/images/paintings/Andrii-Volkov-Sw15.jpg', alt: 'Sw15 - Modern Painting' },
+  { src: '/images/paintings/Andrii-Volkov-Y23.jpg', alt: 'Y23 - Artistic Expression' },
+  { src: '/images/paintings/Y23+-+Andrii+Volkov+-+Detail+2.jpg', alt: 'Y23 Detail - Close-up View' },
+];
 
 export default function Paintings() {
   return (
@@ -13,18 +25,7 @@ export default function Paintings() {
             Explore a collection of original paintings showcasing various styles and techniques.
           </p>
           
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 9 }, (_, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative aspect-square bg-neutral-800 overflow-hidden hover:opacity-90 transition-opacity">
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-500">
-                    <span className="text-sm">Image {i + 1}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ImageGallery images={paintingImages} columns={3} />
         </div>
       </main>
     </>

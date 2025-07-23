@@ -1,4 +1,6 @@
 import Navigation from '@/components/layout/Navigation';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -16,18 +18,18 @@ export default function Home() {
               Artist • Paintings • Tattoos
             </p>
             <div className="space-x-4">
-              <a
+              <Link
                 href="/paintings"
                 className="inline-block px-8 py-3 bg-white text-neutral-900 font-medium hover:bg-neutral-200 transition-colors"
               >
                 VIEW PAINTINGS
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/tattoo"
                 className="inline-block px-8 py-3 border border-white text-white font-medium hover:bg-white hover:text-neutral-900 transition-colors"
               >
                 VIEW TATTOOS
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -38,24 +40,36 @@ export default function Home() {
             Featured Work
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group cursor-pointer">
+            <Link href="/paintings" className="group cursor-pointer">
               <div className="relative h-96 bg-neutral-800 overflow-hidden">
+                <Image
+                  src="/images/paintings/Andrii-Volkov-Y23.jpg"
+                  alt="Featured Painting"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <h3 className="text-xl font-bold">Paintings</h3>
                   <p className="text-neutral-200">Explore the gallery</p>
                 </div>
               </div>
-            </div>
-            <div className="group cursor-pointer">
+            </Link>
+            <Link href="/tattoo" className="group cursor-pointer">
               <div className="relative h-96 bg-neutral-800 overflow-hidden">
+                <Image
+                  src="/images/tattoos/Andrii Volkov - Tattoo 1.jpg"
+                  alt="Featured Tattoo"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                   <h3 className="text-xl font-bold">Tattoo Art</h3>
                   <p className="text-neutral-200">View portfolio</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
       </main>

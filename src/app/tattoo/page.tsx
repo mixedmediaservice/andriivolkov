@@ -1,4 +1,15 @@
 import Navigation from '@/components/layout/Navigation';
+import ImageGallery from '@/components/gallery/ImageGallery';
+
+const tattooImages = [
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 1.jpg', alt: 'Custom Tattoo Design 1' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 2.jpg', alt: 'Custom Tattoo Design 2' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 3.jpg', alt: 'Custom Tattoo Design 3' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 4.jpg', alt: 'Custom Tattoo Design 4' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 5.jpg', alt: 'Custom Tattoo Design 5' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 6.jpg', alt: 'Custom Tattoo Design 6' },
+  { src: '/images/tattoos/Andrii Volkov - Tattoo 7.jpg', alt: 'Custom Tattoo Design 7' },
+];
 
 export default function Tattoo() {
   return (
@@ -13,18 +24,7 @@ export default function Tattoo() {
             A portfolio of custom tattoo designs and completed work.
           </p>
           
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 12 }, (_, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative aspect-square bg-neutral-800 overflow-hidden hover:opacity-90 transition-opacity">
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-500">
-                    <span className="text-sm">Tattoo {i + 1}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ImageGallery images={tattooImages} columns={3} />
         </div>
       </main>
     </>
