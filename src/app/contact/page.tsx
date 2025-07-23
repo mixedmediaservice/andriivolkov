@@ -38,13 +38,7 @@ export default function Contact() {
               <h2 className="text-2xl font-bold text-neutral-900 mb-6">Send a Message</h2>
               
               {/* Elfsight Contact Form Widget */}
-              <div id="elfsight-contact-form">
-                {/* TODO: Replace with actual Elfsight embed code */}
-                <div className="text-center py-8 text-neutral-500">
-                  <p>Elfsight contact form will be embedded here</p>
-                  <p className="text-sm mt-2">Please provide the embed code from your Elfsight dashboard</p>
-                </div>
-              </div>
+              <div className="elfsight-app-4ac0ea71-ae6f-4cb3-8e9a-a5bacd731dee" data-elfsight-app-lazy></div>
             </div>
           </div>
         </div>

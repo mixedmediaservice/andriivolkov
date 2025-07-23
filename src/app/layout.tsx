@@ -31,6 +31,7 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased bg-white text-neutral-900`}
       >
         {children}
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
       </body>
     </html>
   );
