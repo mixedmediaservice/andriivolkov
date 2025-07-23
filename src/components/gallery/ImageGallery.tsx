@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import { trackGalleryInteraction } from '@/lib/analytics';
 
 interface ImageItem {
@@ -36,12 +37,13 @@ export default function ImageGallery({ images, columns = 3 }: ImageGalleryProps)
             }}
           >
             <div className="relative aspect-square bg-neutral-100 overflow-hidden hover:opacity-90 transition-opacity">
-              <Image
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                className="group-hover:scale-105 transition-transform duration-300"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={index < 6}
               />
             </div>
           </div>

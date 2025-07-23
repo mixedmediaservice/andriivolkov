@@ -1,5 +1,5 @@
 import Navigation from '@/components/layout/Navigation';
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -34,12 +34,14 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
-                <Image
+                <OptimizedImage
                   src="/images/Andrii-Volkov-Amsterdam-2019.jpeg"
-                  alt="Andrii Volkov - Artist Photo (Amsterdam, 2019)"
+                  alt="Andrii Volkov - Contemporary artist portrait in Amsterdam studio, 2019"
                   width={600}
                   height={600}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </div>

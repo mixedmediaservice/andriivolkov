@@ -8,6 +8,8 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 export const metadata: Metadata = {
@@ -69,13 +71,8 @@ export const metadata: Metadata = {
     canonical: "https://andriivolkov.com",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/images/favicon.ico", sizes: "any" },
-    ],
-    apple: [
-      { url: "/images/volkov-profile.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
+    apple: "/images/volkov-profile.png",
   },
 };
 
@@ -86,6 +83,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to external domains for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://static.elfsight.com" />
+        
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://www.instagram.com" />
+        <link rel="dns-prefetch" href="https://www.aiacontemporary.com" />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-neutral-900`}
       >

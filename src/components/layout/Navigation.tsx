@@ -7,7 +7,7 @@ import { trackSocialMedia } from '@/lib/analytics';
 
 const navItems = [
   { name: 'HOME', href: '/' },
-  { name: 'PAINTINGS', href: '/paintings' },
+  { name: 'PAINTING', href: '/paintings' },
   { name: 'TATTOO', href: '/tattoo' },
   { name: 'CONTACT', href: '/contact' },
   { name: 'ABOUT', href: '/about' },
