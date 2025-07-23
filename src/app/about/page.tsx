@@ -33,12 +33,12 @@ export default function About() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
-              <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
+              <div className="aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden">
                 <OptimizedImage
                   src="/images/Andrii-Volkov-Amsterdam-2019.jpeg"
                   alt="Andrii Volkov - Contemporary artist portrait in Amsterdam studio, 2019"
                   width={600}
-                  height={600}
+                  height={450}
                   className="w-full h-full"
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
